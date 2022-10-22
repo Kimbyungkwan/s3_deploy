@@ -26,6 +26,6 @@ jobs:
       - name: Invalidation Cloudfront
         run: chetan/invalidate-cloudfront-action@master
         env:
-          AWS_DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
+          DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
           PATHS: '/*'
         continue-on-error: true
