@@ -24,8 +24,8 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
 
       - name: Invalidation Cloudfront
-        run: chetan/invalidate-cloudfront-action@master
+        uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
-          PATHS: '/'
+          PATHS: '/+'
         continue-on-error: true
